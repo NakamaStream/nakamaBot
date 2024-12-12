@@ -34,30 +34,30 @@ client.on('interactionCreate', async (interaction) => {
     }
 });
 
-// Sistema de bienvenida con embed usando el ID del canal
-client.on('guildMemberAdd', async (member) => {
-    const channelId = '1238727456907591741'; // Reemplaza con el ID de tu canal de bienvenida
+// // Sistema de bienvenida con embed usando el ID del canal
+// client.on('guildMemberAdd', async (member) => {
+//     const channelId = 'Id'; // Reemplaza con el ID de tu canal de bienvenida
 
-    // Obtener el canal utilizando su ID
-    const channel = member.guild.channels.cache.get(channelId);
+//     // Obtener el canal utilizando su ID
+//     const channel = member.guild.channels.cache.get(channelId);
 
-    // Verificar si el canal existe y si es un canal de texto
-    if (!channel || !(channel instanceof TextChannel)) return;
+//     // Verificar si el canal existe y si es un canal de texto
+//     if (!channel || !(channel instanceof TextChannel)) return;
 
-    // Crear el embed
-    const welcomeEmbed = new EmbedBuilder()
-        .setColor('#ff6b6b')
-        .setTitle('¡Bienvenido!')
-        .setDescription(`¡Hola ${member.user.username}, Bienvenido al servidor NakamaStream | Anime para todos. ¡Esperamos que disfrutes tu estadía!`)
-        .setThumbnail(member.user.displayAvatarURL({ size: 128 }))  // Usamos la foto del usuario como miniatura
-        .addFields(
-            { name: '¡Esperamos que disfrutes!', value: 'Si necesitas ayuda, no dudes en preguntar.' }
-        )
-        .setTimestamp();
+//     // Crear el embed
+//     const welcomeEmbed = new EmbedBuilder()
+//         .setColor('#ff6b6b')
+//         .setTitle('¡Bienvenido!')
+//         .setDescription(`¡Hola ${member.user.username}, Bienvenido al servidor NakamaStream | Anime para todos. ¡Esperamos que disfrutes tu estadía!`)
+//         .setThumbnail(member.user.displayAvatarURL({ size: 128 }))  // Usamos la foto del usuario como miniatura
+//         .addFields(
+//             { name: '¡Esperamos que disfrutes!', value: 'Si necesitas ayuda, no dudes en preguntar.' }
+//         )
+//         .setTimestamp();
 
-    // Enviar el mensaje de bienvenida al canal
-    channel.send({ embeds: [welcomeEmbed] });
-});
+//     // Enviar el mensaje de bienvenida al canal
+//     channel.send({ embeds: [welcomeEmbed] });
+// });
 
 // Cargar comandos y loguear el bot
 (async () => {
